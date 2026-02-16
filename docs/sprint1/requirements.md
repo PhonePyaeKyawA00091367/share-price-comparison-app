@@ -44,3 +44,26 @@ The system should:
 - User authentication.
 - Portfolio management.
 - Advanced or customised UI design.
+
+- ---
+
+## Data Considerations
+- Share price data will be retrieved from an external provider.
+- The system will support historical daily prices.
+- Data should be cached locally to reduce repeated external calls.
+
+---
+
+## Constraints
+- Maximum date range is limited to two years.
+- Availability of data depends on the external provider.
+- Sprint 1 will focus on architectural structure rather than full UI development.
+
+---
+
+## Alignment with Project Goals
+The primary goal of the project is to design a system with a clear and scalable architecture.
+The requirements support separation of concerns between data retrieval,
+business logic, and presentation. This ensures the system can evolve in
+future sprints without major restructuring.
+

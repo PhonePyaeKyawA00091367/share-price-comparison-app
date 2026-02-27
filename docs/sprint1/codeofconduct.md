@@ -14,8 +14,8 @@
 - Do not break the build on purpose; test before pushing.
 
 ## Meetings & Decisions
-- Attend agreed meetings or notify the team if you cannot attend.
-- Document decisions briefly in the Sprint 1 docs / meeting notes.
+- We have two meetings on Wednesday and Thursday
+- Discuss role and tasks for each members
 
 ## Fair Contribution
 - Tasks should be shared fairly and everyone should contribute commits.

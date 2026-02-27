@@ -1,9 +1,10 @@
 package com.shareprice.model;
 
 public class Price {
-    private String symbol;
-    private double value;
-    private String date;
+
+    private String symbol;  
+    private double value;   
+    private String date;    
 
     public Price(String symbol, double value, String date) {
         this.symbol = symbol;
@@ -21,6 +22,11 @@ public class Price {
 
     public String getDate() {
         return date;
+    }
+
+    @Override
+    public String toString() {
+        return "Price{symbol='" + symbol + "', value=" + value + ", date='" + date + "'}";
     }
 }
 

@@ -1,0 +1,7 @@
+package interfaces;
+
+import java.util.List;
+
+public interface IYahooAPI {
+    List<String> getSharePrices(String symbol, String startDate, String endDate);
+}

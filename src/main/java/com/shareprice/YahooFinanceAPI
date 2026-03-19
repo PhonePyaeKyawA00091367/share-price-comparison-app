@@ -1,0 +1,21 @@
+package external;
+
+import interfaces.IYahooAPI;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class YahooFinanceAPI implements IYahooAPI {
+
+    @Override
+    public List<String> getSharePrices(String symbol, String startDate, String endDate) {
+        System.out.println("Calling Yahoo Finance API...");
+
+        List<String> dummyData = new ArrayList<>();
+        dummyData.add(symbol + " : 100");
+        dummyData.add(symbol + " : 105");
+        dummyData.add(symbol + " : 110");
+
+        return dummyData;
+    }
+}

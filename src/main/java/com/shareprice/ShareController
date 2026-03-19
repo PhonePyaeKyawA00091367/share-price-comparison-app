@@ -1,0 +1,26 @@
+package components;
+
+import interfaces.IFetchData;
+import interfaces.IStoreData;
+import interfaces.IChartData;
+
+import java.util.List;
+
+public class ShareController {
+
+    private IFetchData fetcher;
+    private IStoreData storage;
+    private IChartData chart;
+
+    public ShareController(IFetchData fetcher, IStoreData storage, IChartData chart) {
+        this.fetcher = fetcher;
+        this.storage = storage;
+        this.chart = chart;
+    }
+
+    public void handleRequest(String symbol, String startDate, String endDate) {
+        List<String> data = fetcher.fetchData(symbol, startDate, endDate);
+        storage.saveData(data);
+        chart.renderChart(data);
+    }
+}

@@ -1,0 +1,18 @@
+package usecases;
+
+import interfaces.IChart;
+import entities.SharePrice;
+import java.util.List;
+
+public class ViewChart {
+
+    private IChart chart;
+
+    public ViewChart(IChart chart) {
+        this.chart = chart;
+    }
+
+    public void execute(List<SharePrice> data) {
+        chart.display(data);
+    }
+}

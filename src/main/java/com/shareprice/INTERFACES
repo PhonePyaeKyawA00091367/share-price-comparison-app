@@ -1,0 +1,7 @@
+package interfaces;
+
+public interface IUserInput {
+    String getSymbol();
+    String getStartDate();
+    String getEndDate();
+}

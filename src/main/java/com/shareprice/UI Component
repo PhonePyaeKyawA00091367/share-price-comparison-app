@@ -1,0 +1,28 @@
+package ui;
+
+import interfaces.IUserInput;
+
+import java.util.Scanner;
+
+public class ConsoleUI implements IUserInput {
+
+    private Scanner scanner = new Scanner(System.in);
+
+    @Override
+    public String getSymbol() {
+        System.out.print("Enter symbol: ");
+        return scanner.nextLine();
+    }
+
+    @Override
+    public String getStartDate() {
+        System.out.print("Enter start date: ");
+        return scanner.nextLine();
+    }
+
+    @Override
+    public String getEndDate() {
+        System.out.print("Enter end date: ");
+        return scanner.nextLine();
+    }
+}

@@ -1,0 +1,8 @@
+package interfaces;
+
+import java.util.List;
+
+public interface IStoreData {
+    void saveData(List<String> data);
+    List<String> loadData();
+}

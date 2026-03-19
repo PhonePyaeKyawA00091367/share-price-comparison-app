@@ -1,0 +1,7 @@
+package interfaces;
+
+import entities.SharePrice;
+import java.util.List;
+
+public interface IShareRepository {
+    List<SharePrice> getPrices(String symbol, String start, String end);

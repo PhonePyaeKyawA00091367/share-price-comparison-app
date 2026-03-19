@@ -1,0 +1,21 @@
+package components;
+
+import interfaces.IFetchData;
+import interfaces.IYahooAPI;
+
+import java.util.List;
+
+public class DataFetcher implements IFetchData {
+
+    private IYahooAPI api;
+
+    public DataFetcher(IYahooAPI api) {
+        this.api = api;
+    }
+
+    @Override
+    public List<String> fetchData(String symbol, String startDate, String endDate) {
+        System.out.println("Fetching data from API...");
+        return api.getSharePrices(symbol, startDate, endDate);
+    }
+}

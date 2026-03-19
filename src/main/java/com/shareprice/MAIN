@@ -1,0 +1,30 @@
+package main;
+
+import components.*;
+import external.YahooFinanceAPI;
+import ui.ConsoleUI;
+
+public class Main {
+    public static void main(String[] args) {
+
+        // External API
+        YahooFinanceAPI api = new YahooFinanceAPI();
+
+        // Components
+        DataFetcher fetcher = new DataFetcher(api);
+        LocalStorage storage = new LocalStorage();
+        ChartRenderer chart = new ChartRenderer();
+
+        // Controller
+        ShareController controller = new ShareController(fetcher, storage, chart);
+
+        // UI
+        ConsoleUI ui = new ConsoleUI();
+
+        String symbol = ui.getSymbol();
+        String start = ui.getStartDate();
+        String end = ui.getEndDate();
+
+        controller.handleRequest(symbol, start, end);
+    }
+}

@@ -1,0 +1,19 @@
+package domain;
+
+import java.time.LocalDate;
+
+public class SharePrice {
+    private String symbol;
+    private LocalDate date;
+    private double price;
+
+    public SharePrice(String symbol, LocalDate date, double price) {
+        this.symbol = symbol;
+        this.date = date;
+        this.price = price;
+    }
+
+    public String getSymbol() { return symbol; }
+    public LocalDate getDate() { return date; }
+    public double getPrice() { return price; }
+}

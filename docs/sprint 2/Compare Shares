@@ -1,0 +1,23 @@
+package usecase;
+
+import domain.SharePrice;
+import interfaces.SharePriceRepository;
+
+import java.time.LocalDate;
+import java.util.List;
+
+public class CompareSharesUseCase {
+    private SharePriceRepository repository;
+
+    public CompareSharesUseCase(SharePriceRepository repository) {
+        this.repository = repository;
+    }
+
+    public void compare(String symbol1, String symbol2, LocalDate start, LocalDate end) {
+        List<SharePrice> s1 = repository.getPrices(symbol1, start, end);
+        List<SharePrice> s2 = repository.getPrices(symbol2, start, end);
+
+        System.out.println("Comparing " + symbol1 + " vs " + symbol2);
+        // Later: graph logic
+    }
+}

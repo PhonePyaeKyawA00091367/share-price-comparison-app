@@ -1,0 +1,16 @@
+package components;
+
+import interfaces.IChartData;
+
+import java.util.List;
+
+public class ChartRenderer implements IChartData {
+
+    @Override
+    public void renderChart(List<String> data) {
+        System.out.println("Rendering chart...");
+        for (String d : data) {
+            System.out.println(d);
+        }
+    }
+}

@@ -1,0 +1,33 @@
+package main;
+
+import adapters.*;
+import external.YahooFinanceAPI;
+import interfaces.*;
+import usecases.*;
+import ui.ConsoleUI;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        IYahooAPI api = new YahooFinanceAPI();
+        IShareRepository repo = new ShareRepository(api);
+        IStorage storage = new LocalStorage();
+        IChart chart = new ConsoleChart();
+
+        SearchSharePrices search = new SearchSharePrices(repo);
+        SaveData save = new SaveData(storage);
+        LoadData load = new LoadData(storage);
+        ViewChart view = new ViewChart(chart);
+
+        ShareController controller = new ShareController(search, save, load, view);
+
+        ConsoleUI ui = new ConsoleUI();
+
+        String symbol = ui.getSymbol();
+        String start = ui.getStart();
+        String end = ui.getEnd();
+
+        controller.handle(symbol, start, end);
+    }
+}

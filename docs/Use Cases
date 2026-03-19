@@ -1,0 +1,18 @@
+package usecases;
+
+import interfaces.IShareRepository;
+import entities.SharePrice;
+import java.util.List;
+
+public class SearchSharePrices {
+
+    private IShareRepository repo;
+
+    public SearchSharePrices(IShareRepository repo) {
+        this.repo = repo;
+    }
+
+    public List<SharePrice> execute(String symbol, String start, String end) {
+        return repo.getPrices(symbol, start, end);
+    }
+}

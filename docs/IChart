@@ -1,0 +1,8 @@
+package interfaces;
+
+import entities.SharePrice;
+import java.util.List;
+
+public interface IChart {
+    void display(List<SharePrice> data);
+}

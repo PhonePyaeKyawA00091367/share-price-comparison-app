@@ -1,7 +1,0 @@
-package interfaces;
-
-import java.util.List;
-
-public interface IYahooAPI {
-    List<String> fetch(String symbol, String start, String end);
-}

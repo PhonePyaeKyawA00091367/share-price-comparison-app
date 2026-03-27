@@ -1,9 +1,0 @@
-package interfaces;
-
-import entities.SharePrice;
-import java.util.List;
-
-public interface IStorage {
-    void save(List<SharePrice> data);
-    List<SharePrice> load();
-}

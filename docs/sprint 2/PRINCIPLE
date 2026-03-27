@@ -1,0 +1,43 @@
+src/
+ ├── main/
+ │    └── Main.java
+ ├── domain/
+ │    ├── entities/
+ │    │    ├── User.java
+ │    │    ├── Portfolio.java
+ │    │    ├── Watchlist.java
+ │    │    ├── Stock.java
+ │    │    ├── SharePrice.java
+ │    │    ├── Currency.java
+ │    │    ├── DateRange.java
+ │    │    ├── Chart.java
+ │    │    ├── HistoricalChart.java
+ │    │    └── ComparisonChart.java
+ │    └── interfaces/
+ │         ├── IUserMgt.java
+ │         ├── IStockMgt.java
+ │         ├── IChartMgt.java
+ │         ├── IPriceRepository.java
+ │         ├── IStorage.java
+ │         └── IMarketDataProvider.java
+ ├── application/
+ │    └── usecases/
+ │         ├── SearchStockPricesUseCase.java
+ │         ├── CompareStocksUseCase.java
+ │         ├── SavePriceDataUseCase.java
+ │         ├── LoadStoredDataUseCase.java
+ │         ├── ManagePortfolioUseCase.java
+ │         └── ManageWatchlistUseCase.java
+ ├── infrastructure/
+ │    ├── api/
+ │    │    └── YahooFinanceApi.java
+ │    ├── persistence/
+ │    │    ├── InMemoryStorage.java
+ │    │    └── PriceRepository.java
+ │    └── chart/
+ │         └── ConsoleChartRenderer.java
+ ├── presentation/
+ │    ├── controller/
+ │    │    └── StockController.java
+ │    └── ui/
+ │         └── ConsoleUI.java
